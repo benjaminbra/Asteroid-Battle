@@ -199,7 +199,18 @@ if(global.life &gt; 0){
     instance_create(512,384,player_obj);
     instance_create(512,384,bulle_obj);
 } else {
+
+    if(global.points &gt; global.best){
     
+        ini_open(global.filePath);
+        
+        ini_write_real('save','score',global.points);
+        
+        global.best = global.points;
+        
+        ini_close();
+    }    
+
 }
 </string>
           </argument>

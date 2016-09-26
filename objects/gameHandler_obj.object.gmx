@@ -28,7 +28,22 @@
             <string>global.points = 0;
 global.life = 3;
 global.missedShot = 0;
+global.filePath = working_directory + "asteroidBattle.ini";
 
+ini_open(global.filePath);
+
+if(!ini_key_exists('save','score')){
+    ini_write_real('save','score',0);
+}
+
+lastScore = ini_read_real('save','score',0);
+
+global.best = lastScore;
+
+show_debug_message(global.best);
+
+ini_close();
+    
 instance_create(random(room_width),random(room_height),asteroid1_obj);
 </string>
           </argument>
@@ -90,8 +105,49 @@ if(global.life &lt;=0){
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
     draw_text_transformed(room_width/2,room_height/2,"Game Over",2,2,image_angle);
+    draw_text(room_width/2,(room_height/2)+64,"Meilleur score: "+string(global.best));
+    draw_text(room_width/2,(room_height/2)+96,"Appuie sur R pour relancer");
+    draw_text(room_width/2,(room_height/2)+128,"Appuie sur M pour revenir au menu");
 }
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="82">
+      <action>
+        <libid>1</libid>
+        <id>223</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_current_room</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="9" enumb="77">
+      <action>
+        <libid>1</libid>
+        <id>224</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_another_room</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>11</kind>
+            <room>menu_home</room>
           </argument>
         </arguments>
       </action>

@@ -54,6 +54,8 @@
     <instance objName="newGame_obj" x="288" y="512" name="inst_11AACACD" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="exit_obj" x="736" y="512" name="inst_EC488C42" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="rules_obj" x="288" y="640" name="inst_464A52C7" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="title_obj" x="512" y="224" name="inst_F5A82DFC" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="fullscreen_obj" x="416" y="448" name="inst_4CBC7F81" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
