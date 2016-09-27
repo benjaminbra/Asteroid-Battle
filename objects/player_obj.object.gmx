@@ -55,6 +55,11 @@ global.playerStep = 0;
 } else {
     global.playerStep++;
 }
+
+if(global.destroy==1){
+    global.destroy = 0;
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>
@@ -198,6 +203,7 @@ if(speed &gt; 20){
 bullet.direction = image_angle;
 bullet.image_angle = image_angle;
 bullet.speed = 15;
+audio_play_sound(sShot,10,false);
 </string>
           </argument>
         </arguments>

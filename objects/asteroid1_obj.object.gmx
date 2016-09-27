@@ -25,10 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>while(place_meeting(x,y,player_obj)){
+            <string>step = 0;
+
+while(place_meeting(x,y,player_obj)){
     
     instance_create(random(room_width),random(room_height),asteroid1_obj);
     instance_destroy();
+    
 }
 
 image_speed = 0;
@@ -36,6 +39,7 @@ image_speed = 0;
 
 direction = random(360);
 speed = 0.5 + random(2);
+
 
 </string>
           </argument>
@@ -59,8 +63,10 @@ speed = 0.5 + random(2);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(place_meeting(x, y, self)){
-    direction = random(360);
+            <string>if(step &lt; 30){
+    step++;
+} else {
+    step = 30;
 }
 </string>
           </argument>
@@ -178,40 +184,43 @@ instance_destroy();
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>player_obj</whoName>
+        <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>tempX = x;
-tempY = y;
-
-instance_create(tempX+50,tempY+50,pDestroied1_obj);
-instance_create(tempX-50,tempY-50,pDestroied2_obj);
-
-instance_destroy();
-
-//global.points = max(global.points-100,0);
-global.life = max(global.life - 1,0);
-
-if(global.life &gt; 0){
-    instance_create(512,384,player_obj);
-    instance_create(512,384,bulle_obj);
-} else {
-
-    if(global.points &gt; global.best){
+            <string>if(step &gt;= 30){
+    tempX = x;
+    tempY = y;
     
-        ini_open(global.filePath);
+    instance_create(tempX+50,tempY+50,pDestroied1_obj);
+    instance_create(tempX-50,tempY-50,pDestroied2_obj);
+    
+    global.destroy = 1;
+    
+    //global.points = max(global.points-100,0);
+    global.life = max(global.life - 1,0);
+    
+    if(global.life &gt; 0){
+        instance_create(512,384,player_obj);
+        instance_create(512,384,bulle_obj);
+    } else {
+    
+        if(global.points &gt; global.best){
         
-        ini_write_real('save','score',global.points);
-        
-        global.best = global.points;
-        
-        ini_close();
-    }    
-
+            ini_open(global.filePath);
+            
+            ini_write_real('save','score',global.points);
+            
+            global.best = global.points;
+            
+            ini_close();
+        }    
+    
+    }
 }
+
 </string>
           </argument>
         </arguments>

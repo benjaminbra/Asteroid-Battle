@@ -29,6 +29,7 @@
 global.life = 3;
 global.missedShot = 0;
 global.filePath = working_directory + "asteroidBattle.ini";
+global.destroy = 0;
 
 ini_open(global.filePath);
 
@@ -98,8 +99,8 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_font(fDefault);
 
-draw_text_transformed(1,1,"Score: "+string(global.points),2,2,image_angle);
-draw_text_transformed(1,43,"Vies: "+string(global.life),2,2,image_angle);
+draw_text_transformed(1 ,1 ,"Score: " + string(global.points),2,2,image_angle);
+draw_text_transformed(1 ,43,"Vies: " + string(global.life)   ,2,2,image_angle);
 
 if(global.life &lt;=0){
     draw_set_halign(fa_center);
