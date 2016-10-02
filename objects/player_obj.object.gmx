@@ -56,6 +56,9 @@ global.playerStep = 0;
     global.playerStep++;
 }
 
+global.pos["x"] = x;
+global.pos["y"] = y;
+
 if(global.destroy==1){
     global.destroy = 0;
     instance_destroy();

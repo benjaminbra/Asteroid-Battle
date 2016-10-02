@@ -82,7 +82,11 @@ instance_create(tempX+150,tempY+150,asteroid2_obj);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.points += 25;
+            <string>///Give points and send a bonus.
+
+randomBonus();
+
+global.points += 25;
 </string>
           </argument>
         </arguments>

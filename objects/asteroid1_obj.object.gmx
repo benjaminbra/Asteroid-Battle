@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>step = 0;
+            <string>///Create asteroid and avoid to spawn on the player
+step = 0;
 
 while(place_meeting(x,y,player_obj)){
     
@@ -63,7 +64,8 @@ speed = 0.5 + random(2);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(step &lt; 30){
+            <string>///Timer at every step
+if(step &lt; 30){
     step++;
 } else {
     step = 30;
@@ -90,7 +92,8 @@ speed = 0.5 + random(2);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>tempX = x;
+            <string>///Destroy asteroid and create two little asteroids
+tempX = x;
 tempY = y;
 
 instance_create(tempX+50,tempY+50,asteroid2_obj);
@@ -119,7 +122,11 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.points += 50;
+            <string>///Give points and send a bonus.
+
+randomBonus();
+
+global.points += 50;
 </string>
           </argument>
         </arguments>
@@ -140,7 +147,8 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>tempX = x;
+            <string>///Create Small Asteroid and destroy big one
+tempX = x;
 tempY = y;
 
 instance_create(tempX+50,tempY+50,asteroid2_obj);
@@ -167,7 +175,9 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy();
+            <string>///Destroy bullet
+
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -190,7 +200,8 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(step &gt;= 30){
+            <string>///Destroy player
+if(step &gt;= 30){
     tempX = x;
     tempY = y;
     

@@ -25,11 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.points = 0;
+            <string>//Initialize game
+
+global.points = 0;
 global.life = 3;
 global.missedShot = 0;
 global.filePath = working_directory + "asteroidBattle.ini";
 global.destroy = 0;
+global.pos["x"] = 0;
+global.pos["y"] = 0;
 
 ini_open(global.filePath);
 

@@ -8,41 +8,56 @@
     <sound>sound\sShot</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\sPlayer</sprite>
     <sprite>sprites\sAsteroid1</sprite>
     <sprite>sprites\sAsteroid2</sprite>
-    <sprite>sprites\sBullet</sprite>
+    <sprite>sprites\sBonusB</sprite>
+    <sprite>sprites\sBonusL</sprite>
+    <sprite>sprites\sBonusS</sprite>
+    <sprite>sprites\sMalusS</sprite>
+    <sprite>sprites\sMalusM</sprite>
     <sprite>sprites\sbulle</sprite>
-    <sprite>sprites\sButton_green</sprite>
+    <sprite>sprites\sBullet</sprite>
     <sprite>sprites\sButton_blue</sprite>
+    <sprite>sprites\sButton_green</sprite>
     <sprite>sprites\sButton_red</sprite>
     <sprite>sprites\sDestroidPlayer1</sprite>
     <sprite>sprites\sDestroidPlayer2</sprite>
+    <sprite>sprites\sPlayer</sprite>
     <sprite>sprites\sTitle</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\black</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\randomBonus.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\fDefault</font>
     <font>fonts\font1</font>
   </fonts>
   <objects name="objects">
-    <object>objects\player_obj</object>
-    <object>objects\bullet_obj</object>
     <object>objects\asteroid1_obj</object>
     <object>objects\asteroid2_obj</object>
+    <object>objects\bonus_main_obj</object>
+    <object>objects\bonus0_obj</object>
+    <object>objects\bonus1_obj</object>
+    <object>objects\bonus2_obj</object>
+    <object>objects\malus0_obj</object>
+    <object>objects\malus1_obj</object>
+    <object>objects\bulle_bonus_obj</object>
     <object>objects\bulle_obj</object>
+    <object>objects\bullet_obj</object>
+    <object>objects\fullscreen_obj</object>
     <object>objects\gameHandler_obj</object>
-    <object>objects\newGame_obj</object>
-    <object>objects\exit_obj</object>
     <object>objects\rules_obj</object>
+    <object>objects\exit_obj</object>
+    <object>objects\newGame_obj</object>
     <object>objects\pDestroied1_obj</object>
     <object>objects\pDestroied2_obj</object>
+    <object>objects\player_obj</object>
     <object>objects\rulesHandler_obj</object>
     <object>objects\title_obj</object>
-    <object>objects\fullscreen_obj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\menu_home</room>
