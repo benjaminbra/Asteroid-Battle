@@ -1,0 +1,8 @@
+Bonus : 
+	+1 vie
+	+100 points
+	+10 secondes bouclier
+	
+Malus : -50 points
+	Rotation HS 2 secondes
+	
