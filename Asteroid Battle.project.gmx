@@ -31,6 +31,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\randomBonus.gml</script>
+    <script>scripts\menu_scr.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fDefault</font>
