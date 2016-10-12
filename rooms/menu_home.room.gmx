@@ -53,9 +53,15 @@
   <instances>
     <instance objName="newGame_obj" x="288" y="512" name="inst_11AACACD" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="exit_obj" x="736" y="512" name="inst_EC488C42" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
-    <instance objName="rules_obj" x="288" y="640" name="inst_464A52C7" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="rules_obj" x="736" y="640" name="inst_464A52C7" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="title_obj" x="512" y="224" name="inst_F5A82DFC" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="fullscreen_obj" x="416" y="448" name="inst_4CBC7F81" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="home_obj" x="416" y="448" name="inst_4CBC7F81" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="asteroid1_obj" x="128" y="288" name="inst_2A343DF5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="asteroid1_obj" x="576" y="608" name="inst_4DDE7A9A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="mDestroied1_obj" x="480" y="384" name="inst_E2688D2B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="mDestroied2_obj" x="480" y="416" name="inst_78F5F24C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hardMode_obj" x="288" y="640" name="inst_5C922E28" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="earthMode_obj" x="512" y="512" name="inst_57565734" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

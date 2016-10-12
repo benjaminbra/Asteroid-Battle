@@ -8,22 +8,36 @@
     <sound>sound\sShot</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\sAsteroid1</sprite>
-    <sprite>sprites\sAsteroid2</sprite>
-    <sprite>sprites\sBonusB</sprite>
-    <sprite>sprites\sBonusL</sprite>
-    <sprite>sprites\sBonusS</sprite>
-    <sprite>sprites\sMalusS</sprite>
-    <sprite>sprites\sMalusM</sprite>
     <sprite>sprites\sbulle</sprite>
+    <sprite>sprites\sEarth</sprite>
     <sprite>sprites\sBullet</sprite>
-    <sprite>sprites\sButton_blue</sprite>
-    <sprite>sprites\sButton_green</sprite>
-    <sprite>sprites\sButton_red</sprite>
-    <sprite>sprites\sDestroidPlayer1</sprite>
-    <sprite>sprites\sDestroidPlayer2</sprite>
-    <sprite>sprites\sPlayer</sprite>
     <sprite>sprites\sTitle</sprite>
+    <sprites name="Asteroid">
+      <sprite>sprites\sAsteroid2</sprite>
+      <sprite>sprites\sAsteroid1</sprite>
+    </sprites>
+    <sprites name="BonusMalus">
+      <sprites name="Bonus">
+        <sprite>sprites\sBonusB</sprite>
+        <sprite>sprites\sBonusL</sprite>
+        <sprite>sprites\sBonusS</sprite>
+      </sprites>
+      <sprites name="Malus">
+        <sprite>sprites\sMalusS</sprite>
+        <sprite>sprites\sMalusM</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Player">
+      <sprite>sprites\sPlayer</sprite>
+      <sprite>sprites\sDestroidPlayer1</sprite>
+      <sprite>sprites\sDestroidPlayer2</sprite>
+    </sprites>
+    <sprites name="menuButtons">
+      <sprite>sprites\sButton_green</sprite>
+      <sprite>sprites\sButton_hardgreen</sprite>
+      <sprite>sprites\sButton_red</sprite>
+      <sprite>sprites\sButton_blue</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\black</background>
@@ -31,38 +45,66 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\randomBonus.gml</script>
-    <script>scripts\menu_scr.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fDefault</font>
     <font>fonts\font1</font>
   </fonts>
   <objects name="objects">
-    <object>objects\asteroid1_obj</object>
-    <object>objects\asteroid2_obj</object>
-    <object>objects\bonus_main_obj</object>
-    <object>objects\bonus0_obj</object>
-    <object>objects\bonus1_obj</object>
-    <object>objects\bonus2_obj</object>
-    <object>objects\malus0_obj</object>
-    <object>objects\malus1_obj</object>
-    <object>objects\bulle_bonus_obj</object>
-    <object>objects\bulle_obj</object>
-    <object>objects\bullet_obj</object>
-    <object>objects\fullscreen_obj</object>
-    <object>objects\gameHandler_obj</object>
-    <object>objects\rules_obj</object>
-    <object>objects\exit_obj</object>
-    <object>objects\newGame_obj</object>
-    <object>objects\pDestroied1_obj</object>
-    <object>objects\pDestroied2_obj</object>
-    <object>objects\player_obj</object>
-    <object>objects\rulesHandler_obj</object>
-    <object>objects\title_obj</object>
+    <objects name="GameRuler">
+      <object>objects\home_obj</object>
+      <object>objects\rulesHandler_obj</object>
+      <object>objects\gameHandler_obj</object>
+      <object>objects\bonus_main_obj</object>
+      <objects name="supermodes">
+        <object>objects\hardModeHandler_obj</object>
+        <object>objects\earthModeHandler_obj</object>
+      </objects>
+    </objects>
+    <objects name="Player">
+      <object>objects\player_obj</object>
+      <object>objects\pDestroied1_obj</object>
+      <object>objects\pDestroied2_obj</object>
+      <objects name="menu_destroyed">
+        <object>objects\mDestroied1_obj</object>
+        <object>objects\mDestroied2_obj</object>
+      </objects>
+    </objects>
+    <objects name="BonusMalus">
+      <objects name="Bonus">
+        <object>objects\bonus0_obj</object>
+        <object>objects\bonus1_obj</object>
+        <object>objects\bonus2_obj</object>
+        <object>objects\bulle_bonus_obj</object>
+      </objects>
+      <objects name="Malus">
+        <object>objects\malus0_obj</object>
+        <object>objects\malus1_obj</object>
+      </objects>
+    </objects>
+    <objects name="Asteroid">
+      <object>objects\asteroid1_obj</object>
+      <object>objects\asteroid2_obj</object>
+    </objects>
+    <objects name="IngameObj">
+      <object>objects\bullet_obj</object>
+      <object>objects\bulle_obj</object>
+      <object>objects\earth_obj</object>
+      <object>objects\title_obj</object>
+    </objects>
+    <objects name="Buttons">
+      <object>objects\exit_obj</object>
+      <object>objects\rules_obj</object>
+      <object>objects\newGame_obj</object>
+      <object>objects\hardMode_obj</object>
+      <object>objects\earthMode_obj</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\menu_home</room>
     <room>rooms\battle</room>
+    <room>rooms\earthsaver</room>
+    <room>rooms\hardcore</room>
     <room>rooms\rules</room>
   </rooms>
   <help>

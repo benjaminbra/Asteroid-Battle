@@ -6,3 +6,22 @@ Bonus :
 Malus : -50 points
 	Rotation HS 2 secondes
 	
+Languages:
+	English
+	French
+	
+
+Save the earth mode
+	The ship need to protected the earth from asteroids
+	The game end when a big asteroid touch the earth.
+	Small asteroids will be destroyed if they enter in
+	collision with the earth.
+	Every 100 asteroids destroyed, the earth can launch a
+	nuclear bomb.
+		That will destroy every small asteroids.
+
+Hard Mode
+	The ship got not extra life. If one asteroids touch him.
+	GAME OVER.
+	New thing : There is timer instead of a life. If the timer
+	end, the game too.

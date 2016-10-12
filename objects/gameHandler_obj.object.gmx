@@ -25,15 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Initialize game
+            <string>///Initialize game
 
 global.points = 0;
 global.life = 3;
 global.missedShot = 0;
 global.filePath = working_directory + "asteroidBattle.ini";
 global.destroy = 0;
-global.pos["x"] = 0;
-global.pos["y"] = 0;
+global.rotator = true;
+global.rebooter = 0;
+
+//Change the random seed
+randomize();
 
 ini_open(global.filePath);
 
@@ -76,6 +79,13 @@ instance_create(random(room_width),random(room_height),asteroid1_obj);
     global.points = max(global.points - 25,0);
     global.missedShot = 0;
 }
+
+if(global.rotator == false &amp;&amp; global.rebooter &lt; 20){
+    global.rebooter++;
+} else if (global.rotator == false){
+    global.rebooter = 0;
+    global.rotator = true;
+}
 </string>
           </argument>
         </arguments>
@@ -112,7 +122,7 @@ if(global.life &lt;=0){
     draw_text_transformed(room_width/2,room_height/2,"Game Over",2,2,image_angle);
     draw_text(room_width/2,(room_height/2)+64,"Meilleur score: "+string(global.best));
     draw_text(room_width/2,(room_height/2)+96,"Appuie sur R pour relancer");
-    draw_text(room_width/2,(room_height/2)+128,"Appuie sur M pour revenir au menu");
+    draw_text(room_width/2,(room_height/2)+128,"Appuie sur Esc pour revenir au menu");
 }
 </string>
           </argument>
@@ -135,7 +145,7 @@ if(global.life &lt;=0){
         <isnot>0</isnot>
       </action>
     </event>
-    <event eventtype="9" enumb="77">
+    <event eventtype="9" enumb="27">
       <action>
         <libid>1</libid>
         <id>224</id>

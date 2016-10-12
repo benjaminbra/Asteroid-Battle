@@ -25,18 +25,22 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_colour(c_white);
+            <string>///Display rules
+draw_set_colour(c_white);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
 draw_text(x,y,"Le joueur se contrôle avec les flêches du clavier:
 Haut\Bas gèrent la vitesse du vaisseau.
 Droite\Gauche gèrent la rotation du vaisseau.
-                
+La barre espace permet de tirer.                
+
 Un gros asteroid vaut 50 points.
 Un petit asteroid vaut 25 points.
 Si vous restez immobile vous perdrez 3 points toutes les 2 secondes.
-A chaque fois que vous cumulez 10 tirs ratés, vous perdrez 25 points.");
+A chaque fois que vous cumulez 10 tirs ratés, vous perdrez 25 points.
+
+Il y a 1 chance sur 2 d'obtenir un bonus ou un malus.");
 </string>
           </argument>
         </arguments>
