@@ -7,7 +7,92 @@
   <persistent>0</persistent>
   <parentName>gameHandler_obj</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Initialize game
+
+global.points = 0;
+global.life = 1;
+global.deathTimer = 0;
+//Timer by default 2 minutes
+global.timer = 60 * 2;
+global.timerConverted = "00:00";
+global.missedShot = 0;
+global.filePath = working_directory + "asteroidBattle.ini";
+global.destroy = 0;
+global.rotator = true;
+global.rebooter = 0;
+global.gameMode = "hard";
+//Initialize temp position
+global.tempX = 0;
+global.tempY = 0;
+
+//Change the random seed
+randomize();
+
+initializeScore();
+
+instance_create(random(room_width),random(room_height),asteroid1_obj);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_colour(c_white);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_font(fDefault);
+
+draw_text_transformed(1 ,1 ,"Score: " + string(global.points),2,2,image_angle);
+draw_text_transformed(1 ,43,"Temps: " + string(global.timerConverted)   ,2,2,image_angle);
+
+if(global.life &lt;=0){
+    draw_set_halign(fa_center);
+    draw_set_valign(fa_middle);
+    draw_text_transformed(room_width/2,room_height/2,"Game Over",2,2,image_angle);
+    draw_text(room_width/2,(room_height/2)+64,"Meilleur score: "+string(global.best));
+    draw_text(room_width/2,(room_height/2)+96,"Appuie sur R pour relancer");
+    draw_text(room_width/2,(room_height/2)+128,"Appuie sur Esc pour revenir au menu");
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>

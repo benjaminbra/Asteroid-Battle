@@ -34,23 +34,12 @@ global.filePath = working_directory + "asteroidBattle.ini";
 global.destroy = 0;
 global.rotator = true;
 global.rebooter = 0;
+global.gameMode = "default";
 
 //Change the random seed
 randomize();
 
-ini_open(global.filePath);
-
-if(!ini_key_exists('save','score')){
-    ini_write_real('save','score',0);
-}
-
-lastScore = ini_read_real('save','score',0);
-
-global.best = lastScore;
-
-show_debug_message(global.best);
-
-ini_close();
+initializeScore();
     
 instance_create(random(room_width),random(room_height),asteroid1_obj);
 </string>
@@ -75,7 +64,9 @@ instance_create(random(room_width),random(room_height),asteroid1_obj);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.missedShot &gt;= 10){
+            <string>isAlive();
+
+if(global.missedShot &gt;= 10){
     global.points = max(global.points - 25,0);
     global.missedShot = 0;
 }
@@ -143,6 +134,27 @@ if(global.life &lt;=0){
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>show_debug_message('Restart');
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
     <event eventtype="9" enumb="27">

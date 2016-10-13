@@ -24,7 +24,13 @@ if(cBonus == true){
     switch(oBonus){
         case 0:
         default:
-            instance_create(x,y,bonus0_obj);
+            if(global.gameMode == "hard"){
+                //Add one minute on the timer
+                instance_create(x,y,bonus3_obj);
+            } else {
+                //Add a life
+                instance_create(x,y,bonus0_obj);
+            }
             break;
         case 1:
             instance_create(x,y,bonus1_obj);

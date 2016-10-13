@@ -28,7 +28,7 @@
             <string>///Create asteroid and avoid to spawn on the player
 step = 0;
 
-while(place_meeting(x,y,player_obj)){
+while(place_meeting(x,y,player_obj) || place_meeting(x,y,earth_obj)){
     
     instance_create(random(room_width),random(room_height),asteroid1_obj);
     instance_destroy();
@@ -75,7 +75,7 @@ if(step &lt; 30){
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="player_obj">
+    <event eventtype="4" ename="bulle_obj">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -92,38 +92,14 @@ if(step &lt; 30){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Destroy player
-if(step &gt;= 30){
-    tempX = x;
-    tempY = y;
-    
-    instance_create(tempX+50,tempY+50,pDestroied1_obj);
-    instance_create(tempX-50,tempY-50,pDestroied2_obj);
-    
-    global.destroy = 1;
-    
-    //global.points = max(global.points-100,0);
-    global.life = max(global.life - 1,0);
-    
-    if(global.life &gt; 0){
-        instance_create(512,384,player_obj);
-        instance_create(512,384,bulle_obj);
-    } else {
-    
-        if(global.points &gt; global.best){
-        
-            ini_open(global.filePath);
-            
-            ini_write_real('save','score',global.points);
-            
-            global.best = global.points;
-            
-            ini_close();
-        }    
-    
-    }
-}
+            <string>///Destroy asteroid and create two little asteroids
+tempX = x;
+tempY = y;
 
+instance_create(tempX+50,tempY+50,asteroid2_obj);
+instance_create(tempX-50,tempY-50,asteroid2_obj);
+
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -207,7 +183,7 @@ instance_destroy();
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="bulle_obj">
+    <event eventtype="4" ename="player_obj">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -224,14 +200,14 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Destroy asteroid and create two little asteroids
-tempX = x;
-tempY = y;
+            <string>///Destroy player
+if(step &gt;= 30){
+    global.tempX = x;
+    global.tempY = y;
+    
+    gameOver();
+}
 
-instance_create(tempX+50,tempY+50,asteroid2_obj);
-instance_create(tempX-50,tempY-50,asteroid2_obj);
-
-instance_destroy();
 </string>
           </argument>
         </arguments>

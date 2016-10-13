@@ -10,6 +10,10 @@
   <sprites name="sprites">
     <sprite>sprites\sbulle</sprite>
     <sprite>sprites\sEarth</sprite>
+    <sprite>sprites\sDeadEarth1</sprite>
+    <sprite>sprites\sDeadEarth2</sprite>
+    <sprite>sprites\sDeadEarth3</sprite>
+    <sprite>sprites\sDeadEarth4</sprite>
     <sprite>sprites\sBullet</sprite>
     <sprite>sprites\sTitle</sprite>
     <sprites name="Asteroid">
@@ -20,6 +24,7 @@
       <sprites name="Bonus">
         <sprite>sprites\sBonusB</sprite>
         <sprite>sprites\sBonusL</sprite>
+        <sprite>sprites\sBonusT</sprite>
         <sprite>sprites\sBonusS</sprite>
       </sprites>
       <sprites name="Malus">
@@ -45,6 +50,10 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\randomBonus.gml</script>
+    <script>scripts\gameOver.gml</script>
+    <script>scripts\timerConverter.gml</script>
+    <script>scripts\initializeScore.gml</script>
+    <script>scripts\isAlive.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fDefault</font>
@@ -76,6 +85,7 @@
         <object>objects\bonus1_obj</object>
         <object>objects\bonus2_obj</object>
         <object>objects\bulle_bonus_obj</object>
+        <object>objects\bonus3_obj</object>
       </objects>
       <objects name="Malus">
         <object>objects\malus0_obj</object>
@@ -89,8 +99,14 @@
     <objects name="IngameObj">
       <object>objects\bullet_obj</object>
       <object>objects\bulle_obj</object>
-      <object>objects\earth_obj</object>
       <object>objects\title_obj</object>
+      <objects name="Earth">
+        <object>objects\earth_obj</object>
+        <object>objects\deadEarth1_obj</object>
+        <object>objects\deadEarth2_obj</object>
+        <object>objects\deadEarth3_obj</object>
+        <object>objects\deadEarth4_obj</object>
+      </objects>
     </objects>
     <objects name="Buttons">
       <object>objects\exit_obj</object>

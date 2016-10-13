@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>///Init
 global.playerStep = 0;
+global.playerStopped = 0;
+global.deathTimer = 0;
 </string>
           </argument>
         </arguments>
@@ -49,14 +51,35 @@ global.playerStep = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.playerStep &gt;= 20 &amp;&amp; speed &lt; 1){
-    global.points = max(global.points-3,0);
+            <string>if(global.gameMode == "hard"){
+    //Update timer
+    if(global.playerStep &gt;= 30){
+        if(global.timer &lt;= 0){
+            gameOver();
+        } else {
+            global.timer--;
+        }
+    }
+
+    timerConverter();
+}
+
+//Reset step every seconds
+if(global.playerStep &gt;= 30){
     global.playerStep = 0;
 } else {
     global.playerStep++;
 }
 
-if(global.destroy==1){
+//Remove points if player is almost immobile
+if(global.playerStopped &gt;= 30 &amp;&amp; speed &lt; 1){
+    global.points = max(global.points-3,0);
+    global.playerStopped = 0;
+} else {
+    global.playerStopped++;
+}
+
+if(global.destroy == 1){
     global.destroy = 0;
     instance_destroy();
 }
@@ -261,7 +284,7 @@ if(global.rotator == true){
             <string>bullet = instance_create(x,y,bullet_obj);
 bullet.direction = image_angle;
 bullet.image_angle = image_angle;
-bullet.speed = 15;
+bullet.speed = speed + 15;
 audio_play_sound(sShot,10,false);
 </string>
           </argument>
