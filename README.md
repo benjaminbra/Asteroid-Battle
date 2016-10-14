@@ -11,13 +11,14 @@ Down Arrow - Reduce the speed of your spaceship
 Left/Right Arrow - Rotate your spaceship
 
 ### Bonus & Malus
+#### Bonus
+* 1L - Adds 1 life
+* 10B - Player is protected by a shield during 10 seconds
+* 100pt - Adds 100 points
 
-+ 1L - Adds 1 life
-+ 10B - Player is protected by a shield during 10 seconds
-+ 100pt - Adds 100 points
-
-- H.S - You can't rotate the spaceship during 2 seconds
-- 50pt - Removes 50 points
+#### Malus
+* H.S - You can't rotate the spaceship during 2 seconds
+* 50pt - Removes 50 points
 
 ## Game Modes
 
