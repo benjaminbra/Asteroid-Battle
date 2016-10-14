@@ -47,3 +47,17 @@ But if a big asteroid shoot the earth, Game Over.
 ## More
 
 itch.io page : https://benlaod.itch.io/asteroid-battle
+
+### Editing the game
+
+#### Requirements
+
+Game Maker : Studio 
+
+#### How to open the project
+
+1. In your project directory, create a directory named "Asteroid Battle.gmx".
+2. Clone or Download the project in "Asteroid Battle.gmx".
+3. In "Asteroid Battle.gmx", execute "Asteroid Battle.project.gmx" with Game Maker : Studio
+
+
