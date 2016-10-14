@@ -20,6 +20,13 @@ Left/Right Arrow - Rotate your spaceship
 * H.S - You can't rotate the spaceship during 2 seconds
 * 50pt - Removes 50 points
 
+### Points
+
+* Destroy a big asteroid - Add 50 points
+* Destroy a small asteroid - Add 25 points
+* Speed lower than 1 (almost stationary) - Remove 3 points/2seconds
+* All 10 missed shots combined - Remove 25 points
+
 ## Game Modes
 
 ### Normal
