@@ -1,5 +1,5 @@
 # Asteroid-Battle
-
+![Asteroid Battle Logo](https://img.itch.io/aW1hZ2UvODk5OTgvNDIyNDc0LnBuZw==/315x250%23c/OK1pEU.png)
 ## Gameplay
 
 ### Controls
@@ -50,6 +50,11 @@ But if a big asteroid shoot the earth, Game Over.
 ## More
 
 itch.io page : https://benlaod.itch.io/asteroid-battle
+
+### Next Features
+
+- [ ] Multiplayer modes
+- [ ] Handling languages (At least, English and French)
 
 ### Editing the game
 
