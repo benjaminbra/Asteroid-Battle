@@ -7,7 +7,9 @@ Work In Progress
 ### Controls
 
 Top Arrow - Move your spaceship
+
 Down Arrow - Reduce the speed of your spaceship
+
 Left/Right Arrow - Rotate your spaceship
 
 ### Bonus & Malus
@@ -36,12 +38,15 @@ Just a basic game mode with a score and a life counter.
 ### Hardmode
 
 A timer replace the life counter.
+
 Also the life bonus is replaced by a timer bonus.
+
 If an asteroid touch you or if the timer reaches 0, this is Game Over.
 
 ### Save the earth
 
 This mode is similar as the normal mode. 
+
 But if a big asteroid shoot the earth, Game Over.
 
 ## More
@@ -52,7 +57,8 @@ itch.io page : https://benlaod.itch.io/asteroid-battle
 
 #### Requirements
 
-Game Maker : Studio 
+Game Maker : Studio
+  * https://www.yoyogames.com/studio/system-requirements
 
 #### How to open the project
 
