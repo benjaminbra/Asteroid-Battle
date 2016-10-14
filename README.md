@@ -1,7 +1,5 @@
 # Asteroid-Battle
 
-Work In Progress
-
 ## Gameplay
 
 ### Controls
