@@ -3,6 +3,59 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="3" name="datafiles">
+    <datafile>
+      <name>en.ini</name>
+      <exists>-1</exists>
+      <size>0</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>en.ini</filename>
+    </datafile>
+    <datafile>
+      <name>fr.ini</name>
+      <exists>-1</exists>
+      <size>0</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>fr.ini</filename>
+    </datafile>
+    <datafile>
+      <name>lang.ini</name>
+      <exists>-1</exists>
+      <size>0</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>lang.ini</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\sShot</sound>
@@ -34,6 +87,7 @@
     </sprites>
     <sprites name="Player">
       <sprite>sprites\sPlayer</sprite>
+      <sprite>sprites\sHosted</sprite>
       <sprite>sprites\sDestroidPlayer1</sprite>
       <sprite>sprites\sDestroidPlayer2</sprite>
     </sprites>
@@ -42,6 +96,8 @@
       <sprite>sprites\sButton_hardgreen</sprite>
       <sprite>sprites\sButton_red</sprite>
       <sprite>sprites\sButton_blue</sprite>
+      <sprite>sprites\sLang_fr</sprite>
+      <sprite>sprites\sLang_en</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -54,13 +110,22 @@
     <script>scripts\timerConverter.gml</script>
     <script>scripts\initializeScore.gml</script>
     <script>scripts\isAlive.gml</script>
+    <script>scripts\langSetter.gml</script>
+    <scripts name="multiplayer">
+      <script>scripts\areAlive.gml</script>
+      <script>scripts\deathMultiplayer.gml</script>
+      <script>scripts\playerUpdate.gml</script>
+      <script>scripts\multiGameOver.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fDefault</font>
     <font>fonts\font1</font>
+    <font>fonts\rulesFont</font>
   </fonts>
   <objects name="objects">
     <objects name="GameRuler">
+      <object>objects\menuHandler_obj</object>
       <object>objects\home_obj</object>
       <object>objects\rulesHandler_obj</object>
       <object>objects\gameHandler_obj</object>
@@ -68,6 +133,8 @@
       <objects name="supermodes">
         <object>objects\hardModeHandler_obj</object>
         <object>objects\earthModeHandler_obj</object>
+        <object>objects\multiplayerModeHandler_obj</object>
+        <object>objects\multiRulesHandler_obj</object>
       </objects>
     </objects>
     <objects name="Player">
@@ -77,6 +144,10 @@
       <objects name="menu_destroyed">
         <object>objects\mDestroied1_obj</object>
         <object>objects\mDestroied2_obj</object>
+      </objects>
+      <objects name="multiplayer">
+        <object>objects\hosted_obj</object>
+        <object>objects\normal_obj</object>
       </objects>
     </objects>
     <objects name="BonusMalus">
@@ -98,6 +169,8 @@
     </objects>
     <objects name="IngameObj">
       <object>objects\bullet_obj</object>
+      <object>objects\bulletHosted_obj</object>
+      <object>objects\bulletNormal_obj</object>
       <object>objects\bulle_obj</object>
       <object>objects\title_obj</object>
       <objects name="Earth">
@@ -111,17 +184,24 @@
     <objects name="Buttons">
       <object>objects\exit_obj</object>
       <object>objects\rules_obj</object>
+      <object>objects\rulesMulti_obj</object>
+      <object>objects\backMenu_obj</object>
       <object>objects\newGame_obj</object>
+      <object>objects\multiplayer_obj</object>
       <object>objects\hardMode_obj</object>
       <object>objects\earthMode_obj</object>
+      <object>objects\fr_obj</object>
+      <object>objects\en_obj</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\menu_home</room>
     <room>rooms\battle</room>
+    <room>rooms\multiplayer</room>
     <room>rooms\earthsaver</room>
     <room>rooms\hardcore</room>
     <room>rooms\rules</room>
+    <room>rooms\multiRules</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

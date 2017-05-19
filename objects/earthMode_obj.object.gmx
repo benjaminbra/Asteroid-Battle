@@ -53,8 +53,11 @@ draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_set_font(fDefault);
 
+ini_open(working_directory + global.lang + ".ini");
 
-draw_text(x,y+70,"Save the earth");
+draw_text(x,y+70,ini_read_string("menu","earth","Sauve la terre"));
+
+ini_close();
 </string>
           </argument>
         </arguments>

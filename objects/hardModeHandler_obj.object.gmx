@@ -65,7 +65,7 @@ instance_create(random(room_width),random(room_height),asteroid1_obj);
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>hardModeHandler_obj</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
@@ -76,16 +76,26 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_font(fDefault);
 
-draw_text_transformed(1 ,1 ,"Score: " + string(global.points),2,2,image_angle);
-draw_text_transformed(1 ,43,"Temps: " + string(global.timerConverted)   ,2,2,image_angle);
+ini_open(working_directory + global.lang + ".ini");
+
+times = ini_read_string("game","time","Times");
+scores = ini_read_string("game","score","Score");
+best = ini_read_string("game","best","Best");
+restart = ini_read_string("game","restart","R Restart");
+menu = ini_read_string("game","back","Escape Menu");
+
+ini_close();
+
+draw_text_transformed(1 ,1 ,scores+": " + string(global.points),2,2,image_angle);
+draw_text_transformed(1 ,43,times+": " + string(global.timerConverted)   ,2,2,image_angle);
 
 if(global.life &lt;=0){
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
     draw_text_transformed(room_width/2,room_height/2,"Game Over",2,2,image_angle);
-    draw_text(room_width/2,(room_height/2)+64,"Meilleur score: "+string(global.best));
-    draw_text(room_width/2,(room_height/2)+96,"Appuie sur R pour relancer");
-    draw_text(room_width/2,(room_height/2)+128,"Appuie sur Esc pour revenir au menu");
+    draw_text(room_width/2,(room_height/2)+64,best+": "+string(global.best));
+    draw_text(room_width/2,(room_height/2)+96,restart);
+    draw_text(room_width/2,(room_height/2)+128,menu);
 }
 </string>
           </argument>
