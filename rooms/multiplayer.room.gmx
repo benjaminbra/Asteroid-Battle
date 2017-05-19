@@ -51,10 +51,12 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="player_obj" x="512" y="384" name="inst_07A39D72" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="bulle_obj" x="512" y="384" name="inst_7F8491F1" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="gameHandler_obj" x="448" y="320" name="inst_75508D08" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="home_obj" x="480" y="320" name="inst_E3216A50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hosted_obj" x="256" y="384" name="inst_0D8E547A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="multiplayerModeHandler_obj" x="416" y="320" name="inst_FD7A9B90" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="bulle_obj" x="256" y="384" name="inst_076FFC8F" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="normal_obj" x="736" y="384" name="inst_221D24D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
+    <instance objName="bulle_obj" x="736" y="384" name="inst_B6BB22CD" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
